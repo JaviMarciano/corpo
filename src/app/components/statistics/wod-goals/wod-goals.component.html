@@ -1,0 +1,84 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button [routerLink]="['/goals']" [queryParams]="{month: month}">
+      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+    </ion-button>    
+  </ion-buttons>
+  <ion-title>
+    Objetivos por WOD
+  </ion-title>
+</ion-toolbar>
+
+
+
+<div class="card-body">
+  <div class="month text-center" >
+    <div class="">Semana 1</div>
+    <div>Objetivo: Fuerza</div>
+  </div>
+  <div class="volume mt-3 text-center" >
+    <div>Volumen planificado</div>
+    <div>120</div>
+  </div>
+  <div class="row mt-3 week-container">
+    <div class="col-12 mt-3">
+      <div class="week text-center">
+        <h6>WOD 1</h6>
+        <p class="goal-text">Objetivo: Fuerza</p>
+      </div>
+    </div>
+    <div class="col-12 mt-3">     
+      <div class="week text-center">
+        <h6>WOD 2</h6>
+        <p class="goal-text">Objetivo: Hipertrofia Sarcoplasmica</p>
+        
+      </div>
+    </div>
+    <div class="col-12 mt-3">
+      <div class="week text-center">
+        <h6>WOD 3</h6>
+        <p class="goal-text">Objetivo: Fuerza</p>
+        
+      </div>
+    </div>
+    <div class="col-12 mt-3">
+      <div class="week text-center">
+        <h6>WOD 4</h6>
+        <p class="goal-text">Objetivo: HIIT Aeróbico</p>
+      </div>
+    </div>
+    <div class="col-12 mt-3">
+      <div class="week text-center">
+        <h6>WOD 5</h6>
+        <p class="goal-text">Objetivo: Fuerza</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="wrapper">
+  <ion-card class="card-chart">
+    <ion-card-header>
+      Esfuerzo
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barCanvas1 style="position: relative; height:20vh; width:40vw"></canvas>
+    </ion-card-content>
+  </ion-card>
+
+</section>
+
+
+<section class="wrapper">
+  
+  <ion-card class="card-chart">
+    <ion-card-header>
+      Descanso
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barCanvas2 style="position: relative; height:20vh; width:40vw"></canvas>
+    </ion-card-content>
+  </ion-card>
+
+</section>

@@ -1,0 +1,15 @@
+<corpo-header>Calificar esfuerzo</corpo-header>
+<!--<ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>-->
+<div class="wrapper">
+    <div class="form-group">
+        <input [(ngModel)]="rate" class="form-control w-100 rate-value">
+    </div>
+    <input type="range" value="5" class="w-100" min="0" max="10" step="1" [(ngModel)]="rate">
+    <div class="div-btn-create">
+        <button class="btn btn-success w-100" type="button" [routerLink]="['/effort']">Aceptar</button>
+    </div>
+</div>
+<div class="wrapper">
+    
+</div>
+<!--<mat-slider min="1" max="10" step="1" value="5"></mat-slider>-->

@@ -1,0 +1,68 @@
+<corpo-header>Reporte anual</corpo-header>
+<div class="card-body">
+  <div class="month text-center" [routerLink]="['/goals']" [queryParams]="{month: 'Enero'}">
+      Enero
+  </div>
+  <div class="row mt-3">
+    <div class="col-3" [routerLink]="['/wod-goals']" [queryParams]="{month: 'Enero', week: '1'}">
+      <div class="week text-center">Semana 1</div>
+    </div>
+    <div class="col-3"  [routerLink]="['/wod-goals']" [queryParams]="{month: 'Enero', week: '2'}">
+      <div class="week text-center">Semana 2</div>
+    </div>
+    <div class="col-3" [routerLink]="['/wod-goals']" [queryParams]="{month: 'Enero', week: '3'}">
+      <div class="week text-center">Semana 3</div>
+    </div>
+    <div class="col-3" [routerLink]="['/wod-goals']" [queryParams]="{month: 'Enero', week: '4'}">
+      <div class="week text-center">Semana 4</div>
+    </div>
+  </div>
+</div>
+
+<div class="card-body">
+  <div class="month text-center" [routerLink]="['/goals']" [queryParams]="{month: 'Febrero'}">Febrero</div>
+  <div class="row mt-3">
+    <div class="col-3" [routerLink]="['/wod-goals']" [queryParams]="{month: 'Febrero', week: '1'}">
+      <div class="week text-center">Semana 1</div>
+    </div>
+    <div class="col-3" [routerLink]="['/wod-goals']" [queryParams]="{month: 'Febrero', week: '2'}">
+      <div class="week text-center">Semana 2</div>
+    </div>
+    <div class="col-3" [routerLink]="['/wod-goals']" [queryParams]="{month: 'Febrero', week: '3'}">
+      <div class="week text-center">Semana 3</div>
+    </div>
+    <div class="col-3" [routerLink]="['/wod-goals']" [queryParams]="{month: 'Febrero', week: '4'}">
+      <div class="week text-center">Semana 4</div>
+    </div>
+  </div>
+</div>
+
+<div class="card-body">
+  <div class="month text-center" [routerLink]="['/goals']" [queryParams]="{month: 'Marzo'}">Marzo</div>
+  <div class="row mt-3">
+    <div class="col-3" (click)="goToWeek()">
+      <div class="week text-center">Semana 1</div>
+    </div>
+    <div class="col-3" (click)="goToWeek()">
+      <div class="week text-center">Semana 2</div>
+    </div>
+    <div class="col-3" (click)="goToWeek()">
+      <div class="week text-center">Semana 3</div>
+    </div>
+    <div class="col-3" (click)="goToWeek()">
+      <div class="week text-center">Semana 4</div>
+    </div>
+  </div>
+</div>
+
+<section class="wrapper">
+
+  <ion-card class="card-chart">
+    <ion-card-header>
+      2022
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barCanvas1 style="position: relative; height:20vh; width:40vw"></canvas>
+    </ion-card-content>
+  </ion-card>
+</section>

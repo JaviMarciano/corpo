@@ -1,0 +1,10 @@
+<corpo-header>Asistencias</corpo-header>
+<ion-content>
+    <ion-calendar 
+        [(ngModel)]="date" 
+        (change)="onChange($event)" 
+        [type]="type" 
+       
+        [options]="options">
+    </ion-calendar>
+</ion-content>

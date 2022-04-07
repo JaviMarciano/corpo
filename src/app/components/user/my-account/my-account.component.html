@@ -1,0 +1,60 @@
+<corpo-header>Datos personales</corpo-header>
+<section class="wrapper">
+  <ion-spinner *ngIf="requesting"></ion-spinner>
+  <div class="row"  *ngIf="user">
+    <div class="col-lg-12">
+      <div class="card-account">
+        <div class="row card-body dataUserBox ">
+          <div class="col-lg-6 form-group">
+            <label class="col-4 control-label label">Apellido:</label>
+            <p class="col-8 pull-right">{{user.lastName}}</p>
+          </div>
+          <div class="col-lg-6 form-group">
+            <label class="col-4 control-label label">Nombre:</label>
+            <p class="col-8 pull-right">{{user.name}}</p>
+          </div>
+        </div>
+        <div class="row card-body dataUserBox">
+          <div class="col-lg-6 form-group">
+            <label class="col-4 control-label label">Domicilio:</label>
+            <p class="col-8 pull-right">{{user.address}}</p>
+          </div>
+          <div class="col-lg-6 form-group">
+            <label class="col-4 control-label label">Telefono:</label>
+            <p class="col-8 pull-right">{{user.phone}}</p>
+          </div>
+        </div>
+        <div *ngIf="userType == 2" class="row card-body  dataUserBox">
+          <div class="col-lg-6 form-group">
+            <label class="col-6 control-label label">Cont. de emergencia:</label>
+            <p class="col-6 pull-right">{{user.emergencyContact}}</p>
+          </div>
+          <div class="col-lg-6 form-group">
+            <label class="col-6 control-label label">Tel. de emergencia:</label>
+            <p class="col-6 pull-right">{{user.emergencyPhone}}</p>
+          </div>
+        </div>
+        <div class="row card-body dataUserBox">
+          <div class="col-lg-6 form-group">
+            <label class="col-3 control-label label">Email:</label>
+            <p class="col-9 pull-right">{{user.email}}</p>
+          </div>
+        </div>
+        <div class="row card-body justify-content-center align-items-center">
+          <div class="col-12 col-lg-4 form-group text-center mt-2">
+            <button type="button" class="btn btn-success w-100" (click)="modifyPersonalInformation()">Modificar
+              datos personales</button>
+          </div>
+          <div *ngIf="userType == 2" class="col-12 col-lg-4 form-group text-center mt-2">
+            <button type="button" class="btn btn-success w-100" (click)="modifyMedicalHistory()">Modificar
+              historia médica</button>
+          </div>
+          <div class="col-12 col-lg-4 form-group text-center mt-2">
+            <button type="button" class="btn btn-success w-100" (click)="modifyEmail()">Modificar
+              email</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

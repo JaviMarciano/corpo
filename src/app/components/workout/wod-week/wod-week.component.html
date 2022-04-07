@@ -1,0 +1,46 @@
+<corpo-header>WOD</corpo-header>
+
+
+<ion-spinner *ngIf="requesting"></ion-spinner>
+
+<!--
+<ion-content *ngIf="!wod">
+    <ion-calendar 
+        [(ngModel)]="date" 
+        (change)="onChange($event)" 
+        [type]="type" 
+        [format]="'YYYY-MM-DD'"
+        [options]="options">
+    </ion-calendar>
+</ion-content>
+-->
+
+<section class="wrapper"  *ngIf="!wod">
+    <div class="card">
+
+        <table class="table table-bordered table-condensed cf">
+            <tbody>
+                <tr *ngFor="let day of days" [class.active-day]="day == getActiveDay()">
+                    <td data-title="{{day}}" class="align-middle">
+                        {{day}}
+                    </td>
+                    <td data-title="{{day}}">
+                        <button class="btn btn-success w-100" (click)="viewWod(day)">ver</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+       
+    </div>
+    
+</section>
+<div class="row card-body justify-content-center align-items-center"  *ngIf="!wod">
+    <div class="col-12 col-lg-4 form-group text-center">
+        <button type="button" class="btn btn-success w-100" [routerLink]="['/periodization']">Periodización</button>
+    </div>
+</div>
+
+
+
+
+<app-wod [wod]="wod" (wodEventEmitter)="closeWod()"></app-wod>

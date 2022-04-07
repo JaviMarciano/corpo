@@ -1,0 +1,8 @@
+<corpo-header>Editar datos personales</corpo-header>
+<section class="wrapper">
+  <app-member-form></app-member-form>
+  <div class="div-btn-create">
+    <button class="btn btn-secondary pull-left btn-create" type="button" [routerLink]="['/my-account']">Cancelar</button>
+    <button class="btn btn-success pull-right btn-create" type="submit" (click)="submit()">Guardar</button>
+  </div>
+</section>

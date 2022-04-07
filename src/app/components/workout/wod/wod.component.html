@@ -1,0 +1,49 @@
+<div *ngIf="wod" class="wod-container wrapper">
+  {{wod.name}}
+  <div class="card">
+    <div class="card-body">
+      <label class="label-goal">Objetivos </label>
+
+      <ul class="goal" >
+        <li *ngFor="let goal of getGoals(wod.goal)">{{goal}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card wod-group mt-2" *ngFor="let group of wod.wodGroups; let i = index" [attr.data-index]="i">
+
+
+    <label class="group-detail">
+      {{group.detail}}
+    </label>
+
+
+
+    <div class="">
+      <table class="table table-bordered wod-table">
+        <tbody>
+          <tr *ngFor="let exerciseItem of group.exercises; let ei = index">
+
+            <td class="col-8">
+              {{exerciseItem.units}} {{exerciseItem.exercise.name}} {{((exerciseItem.modality.name != "Repeticiones") ?
+              exerciseItem.modality.name : "")}}
+              
+            </td>
+            <td class="col-2 mode-value" *ngIf="exerciseItem.value">
+              {{getValue(exerciseItem)}}
+            </td>
+            <td class="col-2">
+              <img src="../../../../assets/icon/youtube.ico" (click)="openVideo(exerciseItem.exercise.video)"
+              class="video-icon">
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <button class="btn btn-secondary pull-left mt-2" type="button" (click)="goBack()">Cancelar</button>
+  <button class="btn btn-success pull-right mt-2" type="submit" [routerLink]="['/workout-rating']">Calificar</button>
+
+</div>
