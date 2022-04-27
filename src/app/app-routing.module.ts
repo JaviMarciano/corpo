@@ -9,6 +9,10 @@ import { ReservationComponent } from './components/shift/reservation/reservation
 import { PeriodizationGoalsComponent } from './components/statistics/periodization-goals/periodization-goals.component';
 import { PeriodizationReportComponent } from './components/statistics/periodization-report/periodization-report.component';
 import { WodGoalsComponent } from './components/statistics/wod-goals/wod-goals.component';
+import { ExerciseComponent } from './components/test/exercise/exercise.component';
+import { MyTestsComponent } from './components/test/my-tests/my-tests.component';
+import { ResultComponent } from './components/test/result/result.component';
+import { TestComponent } from './components/test/test/test.component';
 import { EmailEditComponent } from './components/user/email-edit/email-edit.component';
 import { InjuryHistoryComponent } from './components/user/medical-history/injury-history/injury-history.component';
 import { MedicalHistoryCreateComponent } from './components/user/medical-history/medical-history-create/medical-history-create.component';
@@ -94,6 +98,22 @@ const routes: Routes = [
     path: 'wod',
     component: WodComponent
   },  
+  {
+    path: 'mis-tests',
+    component: MyTestsComponent
+  },  
+  {
+    path: 'test',
+    component: TestComponent
+  },  
+  {
+    path: 'resultados',
+    component: ResultComponent
+  },  
+  {
+    path: 'exercise',
+    component: ExerciseComponent
+  }, 
   {
     path: 'wod-week',
     component: WodWeekComponent

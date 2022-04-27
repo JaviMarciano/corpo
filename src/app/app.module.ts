@@ -40,6 +40,10 @@ import { PeriodizationComponent } from './components/workout/periodization/perio
 import { PeriodizationGoalsComponent } from './components/statistics/periodization-goals/periodization-goals.component';
 import { PeriodizationReportComponent } from './components/statistics/periodization-report/periodization-report.component';
 import { WodGoalsComponent } from './components/statistics/wod-goals/wod-goals.component';
+import { TestComponent } from './components/test/test/test.component';
+import { ExerciseComponent } from './components/test/exercise/exercise.component';
+import { MyTestsComponent } from './components/test/my-tests/my-tests.component';
+import { ResultComponent } from './components/test/result/result.component';
 //import { MatSliderModule } from '@angular/material/slider'; 
 
 @NgModule({
@@ -72,7 +76,11 @@ import { WodGoalsComponent } from './components/statistics/wod-goals/wod-goals.c
     PeriodizationComponent,
     PeriodizationGoalsComponent,
     PeriodizationReportComponent,
-    WodGoalsComponent
+    WodGoalsComponent,
+    TestComponent,
+    ExerciseComponent,
+    MyTestsComponent,
+    ResultComponent
   //  MatSliderModule
   ],
   entryComponents: [MyDebtsComponent],
@@ -84,7 +92,7 @@ import { WodGoalsComponent } from './components/statistics/wod-goals/wod-goals.c
     FormsModule,
     ReactiveFormsModule,
     CalendarModule,
-    CommonModule    
+    CommonModule  
   ],
   providers: [
     DatePipe,

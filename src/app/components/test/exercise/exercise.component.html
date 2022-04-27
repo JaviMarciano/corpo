@@ -1,0 +1,80 @@
+<corpo-header>Mis Test</corpo-header>
+<section class="wrapper">
+  <div class="month text-center mb-3">
+    <strong>Ejercicio - {{exercise.name}}</strong>
+  </div>
+
+  <div *ngIf="type == 1" >
+    <ion-card class="margin-card">
+      <ion-item>
+        <ion-icon class="color-icon" name="alarm-outline" slot="start"></ion-icon>
+        <ion-label>Tiempo:</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input class="color-input ps-2"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon class="color-icon" name="fitness-outline" slot="start"></ion-icon>
+        <ion-label>Frecuencia Cardíaca Inicial:</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input  class="color-input ps-2"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon class="color-icon" name="fitness-outline" slot="start"></ion-icon>
+        <ion-label>Frecuencia Cardíaca Final:</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input  class="color-input ps-2"></ion-input>
+      </ion-item>
+    </ion-card>
+  </div>
+
+  <div *ngIf="type == 2">
+    <ion-card class="margin-card">
+      <ion-item>
+        <ion-icon class="color-icon" name="barbell-outline" slot="start"></ion-icon>
+        <ion-label>Repeticiones:</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input  class="color-input ps-2"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon class="color-icon" name="fitness-outline" slot="start"></ion-icon>
+        <ion-label>Frecuencia Cardíaca Inicial:</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input  class="color-input ps-2"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon class="color-icon" name="fitness-outline" slot="start"></ion-icon>
+        <ion-label>Frecuencia Cardíaca Final:</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input  class="color-input ps-2"></ion-input>
+      </ion-item>
+    </ion-card>
+  </div>
+
+  <div *ngIf="type == 3">
+    <ion-card class="margin-card">
+      <ion-item>
+        <ion-icon class="color-icon" name="film-outline" slot="start"></ion-icon>
+        <ion-label><a class="color-link" href="https://www.youtube.com/watch?v=KtZsQrYAJ0Y">Ver Video</a></ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon class="color-icon" name="arrow-up-circle-outline" slot="start"></ion-icon>
+        <ion-button expand="block" color="medium">Subir Video</ion-button>
+      </ion-item>
+
+    </ion-card>
+  </div>
+
+  <ion-button expand="block" color="success" class="margin-btn">Guardar</ion-button>
+  <ion-button expand="block" color="medium" class="margin-btn" [routerLink]="['/test']">Volver</ion-button>
+</section>

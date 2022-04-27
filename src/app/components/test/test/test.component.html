@@ -1,0 +1,30 @@
+<corpo-header>Mis Test</corpo-header>
+<section class="wrapper">
+  <div class="month text-center mb-3">
+    <strong>Test: {{testMember.name}}</strong>
+  </div>
+  <div class="margin-btn" *ngFor="let exercise of testMember.testExercisesMember; index as i">
+    <ion-button expand="block" color="success" class="main-center" [routerLink]="['/exercise']" [queryParams]="{id: exercise.id, type: exercise.testType}">Ejercicio Nº {{i + 1}}</ion-button>
+  </div>
+  <ion-button expand="block" color="medium" class="margin-btn" [routerLink]="['/mis-tests']">Volver</ion-button>
+</section>
+
+<!-- <ion-accordion-group >
+  <ion-accordion value="{{i+1}}" *ngFor="let exercise of testMember.testExercisesMember; index as i">
+    <ion-item slot="header">
+      <ion-label>Ejercicio Nº {{i+1}}</ion-label>
+    </ion-item>
+
+    <ion-list slot="content">
+      <ion-item>
+        <ion-label>Red</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Green</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Blue</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-accordion>
+</ion-accordion-group> -->
